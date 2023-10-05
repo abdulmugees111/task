@@ -58,3 +58,6 @@ background-color: white;
     display:flex;
     justify-content:flex-end;
   }
+  .footer{
+    height: 100% ;
+  }
