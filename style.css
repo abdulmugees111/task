@@ -1,0 +1,60 @@
+.col{
+     color: white !important
+}
+.custBG{
+    height:81vh;
+background-color: white;
+}
+.customIcon{
+    padding: 10%;
+    border-top: solid;
+    margin-top: 200% !important;
+}
+.interCont{
+    border-bottom-right-radius: 80px;
+    background-color: #F88A2B;
+    height: 77vh;
+}
+.customInput{
+    width: 25rem;
+    background-color: lightgrey;
+    border-bottom-right-radius: 23px;
+    border-top-right-radius: 23px;
+    height: 35px;
+}
+.custombtn{
+    background-color: #F88A2B;
+    display: flex;
+    height: 35px;
+    color: white;
+    padding-top: 4px;
+    padding-right: 5px;
+    border-bottom-left-radius: 23px;
+    border-top-left-radius: 23px;
+    padding-left: 10px;
+}
+.customdro{
+    margin-top: 10%;
+    right: 3%
+    
+}
+
+.main {
+    width: 100%;
+    display:flex;
+  }
+  
+  .center {
+    display: inline-block;
+    flex:1;
+    display:flex;
+    justify-content:center;
+  }
+  
+  
+  .right {
+    display: inline-block;
+    flex:-1;
+    display:flex;
+    justify-content:flex-end;
+  }
