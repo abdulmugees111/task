@@ -1,27 +1,25 @@
+import React, { useState } from "react";
+import { SearchIcon, UserIcon } from "@heroicons/react/solid";
+import { useModal } from "react-modal-hook";
+import Modal from "./SettingModel";
 
-import React, { useState } from 'react';
-import { SearchIcon, UserIcon } from '@heroicons/react/solid';
-import { useModal } from 'react-modal-hook';
-import Modal from './SettingModel';
+interface HeaderProps {}
 
-const Header: React.FC = () => {
+const Header: React.FC<HeaderProps> = () => {
   const [show, hide] = useModal(
-    () => <Modal isOpen={hide} />,
+    () => <Modal onClose={hide} isOpen={false} />,
     []
   );
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
-
   return (
     <header className="bg-white py-4">
-
-
-      <div className="main">
-        <div className="center">
-          <button className="outline-none focus:outline-none custombtn">
+      <div className="w-full flex">
+        <div className="inline-block flex-1 flex justify-center">
+          <button className="outline-none focus:outline-none bg-[#F88A2B] flex h-[40px] text-white pt-2 pr-5 pl-10 rounded-tl-[23px] rounded-bl-[23px]">
             <SearchIcon className="w-6 h-6 col" />
             button
           </button>
@@ -29,13 +27,13 @@ const Header: React.FC = () => {
           <input
             type="text"
             placeholder="Search"
-            className="bg-transparent outline-none w-16 customInput"
+            className="bg-transparent outline-none w-16 w-[25rem] bg-gray-300 rounded-tr-[23px] rounded-br-[23px] h-[40px] p-5"
           />
         </div>
 
         <div className="flex items-center mr-5">
           <button
-            className="outline-none focus:outline-none"
+            className="bg-[#DDE437] h-[35px] w-[35px] rounded-[18px] pl-1.5"
             onClick={toggleDropdown}
           >
             <UserIcon className="w-6 h-6" />
